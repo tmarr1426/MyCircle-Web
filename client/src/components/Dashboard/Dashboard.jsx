@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Box, Card, CardContent, Typography, CardMedia } from "@mui/material";
 
 const Dashboard = () => {
-  const [stats, setStates] = useState([]);
+  const [stats, setStats] = useState([]);
   useEffect(() => {
     const myCircle = async () => {
       try {
@@ -12,6 +13,7 @@ const Dashboard = () => {
         });
         const response = await data.json();
         console.log("Response", response);
+        setStats(response.circle);
       } catch (err) {
         console.log("There was an error getting the information.", err);
       }
@@ -31,7 +33,15 @@ const Dashboard = () => {
           MyCircle is the area that you should be aiming to get your drives or
           approaches within to have a 90% confidence rate putt.
         </h4>
-        <h1>MyCircle: {myCircle}</h1>
+        {stats.map((obj) => {
+          return (
+            <Card key={obj.id}>
+              <Box>
+                <Typography>MyCircle: {obj.circle}</Typography>
+              </Box>
+            </Card>
+          );
+        })}
       </div>
     </>
   );
