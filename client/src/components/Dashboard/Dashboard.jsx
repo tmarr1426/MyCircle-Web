@@ -13,7 +13,11 @@ const Dashboard = () => {
         });
         const response = await data.json();
         console.log("Response", response);
-        setStats(response.circle);
+        const percentages = response.circle.map((item) => ({
+          ...item,
+          percentage: ((item.value / 10) * 100).toFixed(2), // Convert to percentage
+        }));
+        setStats(percentages);
       } catch (err) {
         console.log("There was an error getting the information.", err);
       }
@@ -23,19 +27,19 @@ const Dashboard = () => {
 
   return (
     <>
-      <div>
-        <h1>Welcome to MyCircle!</h1>
-        <h4>
+      <div className="dashboard">
+        <h1 className="mycircle-title">Welcome to MyCircle!</h1>
+        <h4 className="mycircle-description">
           Every putting session will average your made putts together and give
           you what we call, MyCircle.
         </h4>
-        <h4>
+        <h4 className="mycircle-description">
           MyCircle is the area that you should be aiming to get your drives or
           approaches within to have a 90% confidence rate putt.
         </h4>
         {stats.map((obj) => {
           return (
-            <Card key={obj.id}>
+            <Card key={obj.id} className={"mycircle-stats"}>
               <Box>
                 <Typography>MyCircle: {obj.circle}</Typography>
               </Box>
