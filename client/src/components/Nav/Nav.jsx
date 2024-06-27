@@ -33,7 +33,7 @@ const Nav = (props) => {
               location.pathname.includes("/putting-session") && backgroundColor,
           }}
         >
-          Begin a Putting Session
+          Putting Session
         </button>
       </Link>
       <button

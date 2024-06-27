@@ -59,7 +59,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/stats" element={<Stats />} />
+            <Route path="/putting-session" element={<PuttingSession />} />
           </Routes>
         </>
       )} */}
