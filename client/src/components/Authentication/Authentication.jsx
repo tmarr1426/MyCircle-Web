@@ -22,7 +22,7 @@ const Auth = (props) => {
   const handleSignup = async () => {
     try {
       const response = await (
-        await fetch("http://localhost:8081/signup", {
+        await fetch("http://localhost:8080/user/signup", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -44,7 +44,7 @@ const Auth = (props) => {
   const handleLogin = async () => {
     try {
       // Fetch from the parent account login route
-      const login = await fetch("http://localhost:8081/login", {
+      const login = await fetch("http://localhost:8080/user/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

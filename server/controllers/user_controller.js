@@ -40,7 +40,7 @@ router.post("/signup", async (req, res) => {
 });
 
 // Creates login endpoint for a user to sign in
-router.post("/signin", async (req, res) => {
+router.post("/login", async (req, res) => {
   try {
     let { email, password } = req.body;
 
