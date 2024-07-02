@@ -2,7 +2,16 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 
-import { Auth, Login, Singup, Dashboard, PuttingSession, Nav } from "./index";
+import {
+  Auth,
+  Login,
+  Singup,
+  Dashboard,
+  PuttingSession,
+  Nav,
+  Header,
+  Footer,
+} from "./index";
 
 function App() {
   const [sessionToken, setSessionToken] = useState(false);
@@ -63,6 +72,9 @@ function App() {
           </Routes>
         </>
       )} */}
+      <div>
+        <Header></Header>
+      </div>
       <div>
         <Nav></Nav>
       </div>
