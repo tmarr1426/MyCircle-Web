@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-      {/* {!sessionToken && (
+      {!sessionToken && (
         <>
           <div>
             <Routes>
@@ -62,15 +62,15 @@ function App() {
             <Route path="/stats" element={<Stats />} />
           </Routes>
         </>
-      )} */}
-      <div>
+      )}
+      {/* <div>
         <Nav></Nav>
       </div>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/putting-session" element={<PuttingSession />} />
-      </Routes>
+      </Routes> */}
     </>
   );
 }

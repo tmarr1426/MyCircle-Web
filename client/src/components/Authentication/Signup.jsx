@@ -24,11 +24,7 @@ const Signup = ({ handleChange, handleSignup }) => {
         contentLabel="Parent"
       >
         <form style={{ display: "flex", flexDirection: "column" }}>
-          <h2>Sign Up As A Parent</h2>
-          <label>First Name</label>
-          <input onChange={(e) => handleChange("first", e.target.value)} />
-          <label>Last Name</label>
-          <input onChange={(e) => handleChange("last", e.target.value)} />
+          <h2>Sign Up!</h2>          
           <label>Email</label>
           <input onChange={(e) => handleChange("email", e.target.value)} />
           <label>Password</label>
