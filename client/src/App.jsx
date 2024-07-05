@@ -75,7 +75,7 @@ function App() {
           </Routes>
         </>
       )} */}
-      <div>
+      <div className="header">
         <Header></Header>
       </div>
       <Routes>
@@ -83,7 +83,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/putting-session" element={<PuttingSession />} />
       </Routes>
-      <div>
+      <div className="nav">
         <Nav></Nav>
       </div>
     </>

@@ -16,13 +16,13 @@ const Counter = ({ name }) => {
   };
 
   return (
-    <div style={{ textAlign: "center" }}>
-      <h4>{name}</h4>
-      <p>{count}</p>
-      <button type="button" onClick={increment}>
+    <div className="counter" style={{ textAlign: "center" }}>
+      <h4 className="h4">{name}</h4>
+      <p className="">{count}</p>
+      <button className="putt-button" type="button" onClick={increment}>
         +
       </button>
-      <button type="button" onClick={decrement}>
+      <button className="putt-button" type="button" onClick={decrement}>
         -
       </button>
     </div>

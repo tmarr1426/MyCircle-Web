@@ -8,7 +8,6 @@ const Nav = (props) => {
 
   return (
     <div className="nav" style={{ width: "15em" }}>
-      <img className="nav-image" style={{ height: "8em", left: "1em" }} />
       <Link to="/Dashboard">
         <button
           className="dash"

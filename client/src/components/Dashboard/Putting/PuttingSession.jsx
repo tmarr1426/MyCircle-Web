@@ -114,45 +114,53 @@ const PuttingSession = () => {
 
   return (
     <>
-      <div>
+      <div className="counter">
         <form onSubmit={handleSubmit}>
           <Counter
             name="10 Feet"
+            className="putt-session"
             onChange={(e) => handleChange("10 feet", e.target.value)}
           >
             10
           </Counter>
           <Counter
             name="15 Feet"
+            className="putt-session"
             onChange={(e) => handleChange("15 feet", e.target.value)}
           >
             15
           </Counter>
           <Counter
             name="20 Feet"
+            className="putt-session"
             onChange={(e) => handleChange("20 feet", e.target.value)}
           >
             20
           </Counter>
           <Counter
             name="25 Feet"
+            className="putt-session"
             onChange={(e) => handleChange("25 feet", e.target.value)}
           >
             25
           </Counter>
           <Counter
             name="30 Feet"
+            className="putt-session"
             onChange={(e) => handleChange("30 feet", e.target.value)}
           >
             30
           </Counter>
           <Counter
             name="35 Feet"
+            className="putt-session"
             onChange={(e) => handleChange("35 feet", e.target.value)}
           >
             35
           </Counter>
-          <button type="submit">Submit</button>
+          <button className="submit1" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </>
