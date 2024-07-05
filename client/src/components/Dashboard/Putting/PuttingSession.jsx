@@ -37,25 +37,43 @@ const PuttingSession = () => {
   const handleSubmit = async () => {
     e.preventDefault();
     try {
-      const puttData = await (
-        await fetch("backend url", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            putt10Feet: putt10Feet,
-            putt15Feet: putt15Feet,
-            putt20Feet: putt20Feet,
-            putt25Feet: putt25Feet,
-            putt30Feet: putt30Feet,
-            putt35Feet: putt35Feet,
-          }),
-        })
-      ).json();
+      const response = await fetch("backend url", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          putt10Feet: putt10Feet,
+          putt15Feet: putt15Feet,
+          putt20Feet: putt20Feet,
+          putt25Feet: putt25Feet,
+          putt30Feet: putt30Feet,
+          putt35Feet: putt35Feet,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const puttData = await response.json();
       console.log(puttData);
+      const puttMax = 10;
+      const putt10Points = async () => {
+        try {
+          const response = await fetch("fetch url", {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("MyToken")}`,
+            },
+          });
+          const json = await response.json();
+          console.log(json);
+        } catch (err) {
+          console.log(err);
+        }
+      };
     } catch (err) {
-      console.log("You hit an error during submission", err);
+      console.error("You hit an error during submission", err);
     }
   };
   // const data = {
@@ -69,45 +87,47 @@ const PuttingSession = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <Counter
-          name="10 Feet"
-          onChange={(e) => handleChange("10 feet", e.target.value)}
-        >
-          10
-        </Counter>
-        <Counter
-          name="15 Feet"
-          onChange={(e) => handleChange("15 feet", e.target.value)}
-        >
-          15
-        </Counter>
-        <Counter
-          name="20 Feet"
-          onChange={(e) => handleChange("20 feet", e.target.value)}
-        >
-          20
-        </Counter>
-        <Counter
-          name="25 Feet"
-          onChange={(e) => handleChange("25 feet", e.target.value)}
-        >
-          25
-        </Counter>
-        <Counter
-          name="30 Feet"
-          onChange={(e) => handleChange("30 feet", e.target.value)}
-        >
-          30
-        </Counter>
-        <Counter
-          name="35 Feet"
-          onChange={(e) => handleChange("35 feet", e.target.value)}
-        >
-          35
-        </Counter>
-        <button type="submit">Submit</button>
-      </form>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <Counter
+            name="10 Feet"
+            onChange={(e) => handleChange("10 feet", e.target.value)}
+          >
+            10
+          </Counter>
+          <Counter
+            name="15 Feet"
+            onChange={(e) => handleChange("15 feet", e.target.value)}
+          >
+            15
+          </Counter>
+          <Counter
+            name="20 Feet"
+            onChange={(e) => handleChange("20 feet", e.target.value)}
+          >
+            20
+          </Counter>
+          <Counter
+            name="25 Feet"
+            onChange={(e) => handleChange("25 feet", e.target.value)}
+          >
+            25
+          </Counter>
+          <Counter
+            name="30 Feet"
+            onChange={(e) => handleChange("30 feet", e.target.value)}
+          >
+            30
+          </Counter>
+          <Counter
+            name="35 Feet"
+            onChange={(e) => handleChange("35 feet", e.target.value)}
+          >
+            35
+          </Counter>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </>
   );
 };

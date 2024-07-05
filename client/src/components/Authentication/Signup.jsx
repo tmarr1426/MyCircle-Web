@@ -21,7 +21,7 @@ const Signup = ({ handleChange, handleSignup }) => {
         className={"modal"}
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        contentLabel="Parent"
+        contentLabel="Sign Up"
       >
         <form style={{ display: "flex", flexDirection: "column" }}>
           <h2>Sign Up!</h2>          
