@@ -7,17 +7,11 @@ const Nav = (props) => {
   let backgroundColor = "#569AA6";
 
   return (
-    <div
-      className="w3-card-2 w3-sidebar w3-bar-block w3-display-left roboto-regular gradient-vertical"
-      style={{ width: "15em" }}
-    >
-      <img
-        className="w3-bar-item"
-        // src={HeaderImage}
-        style={{ height: "8em", left: "1em" }}
-      />
+    <div className="nav" style={{ width: "15em" }}>
+      <img className="nav-image" style={{ height: "8em", left: "1em" }} />
       <Link to="/Dashboard">
         <button
+          className="dash"
           style={{
             background:
               location.pathname.includes("/Dashboard") && backgroundColor,
@@ -28,6 +22,7 @@ const Nav = (props) => {
       </Link>
       <Link to="/putting-session">
         <button
+          className="putt"
           style={{
             background:
               location.pathname.includes("/putting-session") && backgroundColor,
@@ -36,11 +31,7 @@ const Nav = (props) => {
           Begin a Putting Session
         </button>
       </Link>
-      <button
-        className="w3-display-bottomleft"
-        onClick={props.clearToken}
-        style={{ marginBottom: "2em", marginLeft: "3.00em" }}
-      >
+      <button className="logout" onClick={props.clearToken}>
         Logout
       </button>
     </div>

@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   // Sets the Token for the user session in the localstorage of the website.
-  const updateToken = (token, userType) => {
+  const updateToken = (token) => {
     console.log("Token Updated", token);
 
     localStorage.setItem("MyToken", token);
@@ -49,6 +49,9 @@ function App() {
     <>
       {/* {!sessionToken && (
         <>
+        <div>
+        <Header><Header/>
+        </div>
           <div>
             <Routes>
               <Route path="/" element={<Auth />} />
@@ -75,14 +78,14 @@ function App() {
       <div>
         <Header></Header>
       </div>
-      <div>
-        <Nav></Nav>
-      </div>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/putting-session" element={<PuttingSession />} />
       </Routes>
+      <div>
+        <Nav></Nav>
+      </div>
     </>
   );
 }

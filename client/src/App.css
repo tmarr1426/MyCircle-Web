@@ -40,3 +40,33 @@
 .read-the-docs {
   color: #888;
 }
+
+@media screen and (max-width: 600px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-left: 80vw;
+    align-content: center;
+  }
+
+  .putt {
+    width: 45vw;
+    height: 5vh;
+  }
+  .logout {
+    width: 45vw;
+    height: 5vh;
+  }
+  .dash {
+    height: 5vh;
+  }
+
+  .h1 {
+    font-size: 8em;
+  }
+
+  .h4 {
+    font-size: 2.5em;
+  }
+}

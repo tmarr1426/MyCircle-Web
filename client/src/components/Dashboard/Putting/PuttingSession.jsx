@@ -8,6 +8,12 @@ const PuttingSession = () => {
   const [putt25Feet, setPutt25Feet] = useState(0);
   const [putt30Feet, setPutt30Feet] = useState(0);
   const [putt35Feet, setPutt35Feet] = useState(0);
+  const [putt10Points, setPutt10Points] = useState(0);
+  const [putt15Points, setPutt15Points] = useState(0);
+  const [putt20Points, setPutt20Points] = useState(0);
+  const [putt25Points, setPutt25Points] = useState(0);
+  const [putt30Points, setPutt30Points] = useState(0);
+  const [putt35Points, setPutt35Points] = useState(0);
 
   const handleChange = (state, value) => {
     switch (state) {
@@ -58,19 +64,40 @@ const PuttingSession = () => {
 
       const puttData = await response.json();
       console.log(puttData);
-      const puttMax = 10;
-      const putt10Points = async () => {
-        try {
-          const response = await fetch("fetch url", {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("MyToken")}`,
-            },
-          });
-          const json = await response.json();
-          console.log(json);
-        } catch (err) {
-          console.log(err);
+      const points = async () => {
+        if (putt10Feet > 8) {
+          setPutt10Points(10);
+        } else if (putt10Feet > 7 && putt10Feet < 8) {
+          setPutt10Points(8);
+        } else if (putt10Feet > 6 && putt10Feet <= 7) {
+          setPutt10Points(7);
+        } else if (putt10Feet > 5 && putt10Feet <= 6) {
+          setPutt10Points(6);
+        } else if (putt10Feet > 4 && putt10Feet <= 5) {
+          setPutt10Points(5);
+        } else if (putt10Feet > 3 && putt10Feet <= 4) {
+          setPutt10Points(4);
+        } else if (putt10Feet > 2 && putt10Feet <= 3) {
+          setPutt10Points(3);
+        } else if (putt10Feet > 1 && putt10Feet <= 2) {
+          setPutt10Points(2);
+        } else if (putt10Feet > 0 && putt10Feet <= 1) {
+          setPutt10Points(1);
+        } else {
+          console.log("There has been an error");
         }
+        points(puttData);
+        // try {
+        //   const response = await fetch("fetch url", {
+        //     headers: {
+        //       Authorization: `Bearer ${localStorage.getItem("MyToken")}`,
+        //     },
+        //   });
+        //   const json = await response.json();
+        //   console.log(json);
+        // } catch (err) {
+        //   console.log(err);
+        // }
       };
     } catch (err) {
       console.error("You hit an error during submission", err);

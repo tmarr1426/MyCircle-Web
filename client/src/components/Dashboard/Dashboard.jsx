@@ -32,12 +32,12 @@ const Dashboard = () => {
   return (
     <>
       <div>
-        <h1>Welcome to MyCircle!</h1>
-        <h4>
+        <h1 className="h1">Welcome to MyCircle!</h1>
+        <h4 className="h4">
           Every putting session will average your made putts together and give
           you what we call, MyCircle.
         </h4>
-        <h4>
+        <h4 className="h4">
           MyCircle is the area that you should be aiming to get your drives or
           approaches within to have a 90% confidence rate putt.
         </h4>
