@@ -2,7 +2,14 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 
-import { Auth, Dashboard, PuttingSession, Nav } from "./index";
+import {
+  Auth,
+  Dashboard,
+  PuttingSession,
+  Nav,
+  Header,
+  Footer,
+} from "./index";
 
 function App() {
   const [sessionToken, setSessionToken] = useState(false);
@@ -42,6 +49,9 @@ function App() {
     <>
       {!sessionToken && (
         <>
+        <div>
+          <Header />
+        </div>
           <div>
             <Routes>
               <Route path="/" element={<Auth />} />
@@ -57,6 +67,7 @@ function App() {
       {sessionToken && (
         <>
           <div>
+            <Header />
             <Nav clearToken={clearToken} />
           </div>
           <Routes>
