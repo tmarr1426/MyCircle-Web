@@ -4,7 +4,28 @@
   padding: 2rem;
   text-align: center;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: center;
+}
 
+.putt {
+  width: 45vw;
+  height: 5vh;
+  font-size: 20px;
+}
+.logout {
+  width: 45vw;
+  height: 5vh;
+  font-size: 20px;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
