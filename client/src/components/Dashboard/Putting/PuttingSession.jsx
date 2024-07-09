@@ -92,13 +92,13 @@ const PuttingSession = () => {
       putt10points();
 
       const putt15points = () => {
-        if (putt15Feet >= 4) {
+        if (putt15Feet >= 8) {
           setPutt15Points(5);
-        } else if (putt15Feet >= 3) {
+        } else if (putt15Feet >= 6) {
           setPutt15Points(4);
-        } else if (putt15Feet >= 2) {
+        } else if (putt15Feet >= 4) {
           setPutt15Points(3);
-        } else if (putt15Feet >= 1) {
+        } else if (putt15Feet >= 2) {
           setPutt15Points(2);
         } else if (putt15Feet >= 0) {
           setPutt15Points(1);
@@ -109,13 +109,13 @@ const PuttingSession = () => {
       putt15points();
 
       const putt20points = () => {
-        if (putt20Feet >= 4) {
+        if (putt20Feet >= 8) {
           setPutt20Points(5);
-        } else if (putt20Feet >= 3) {
+        } else if (putt20Feet >= 6) {
           setPutt20Points(4);
-        } else if (putt20Feet >= 2) {
+        } else if (putt20Feet >= 4) {
           setPutt20Points(3);
-        } else if (putt20Feet >= 1) {
+        } else if (putt20Feet >= 2) {
           setPutt20Points(2);
         } else if (putt20Feet >= 0) {
           setPutt20Points(1);
@@ -126,13 +126,13 @@ const PuttingSession = () => {
       putt20points();
 
       const putt25points = () => {
-        if (putt25Feet >= 4) {
+        if (putt25Feet >= 8) {
           setPutt25Points(5);
-        } else if (putt25Feet >= 3) {
+        } else if (putt25Feet >= 6) {
           setPutt25Points(4);
-        } else if (putt25Feet >= 2) {
+        } else if (putt25Feet >= 4) {
           setPutt25Points(3);
-        } else if (putt25Feet >= 1) {
+        } else if (putt25Feet >= 2) {
           setPutt25Points(2);
         } else if (putt25Feet >= 0) {
           setPutt25Points(1);
@@ -143,13 +143,13 @@ const PuttingSession = () => {
       putt25points();
 
       const putt30points = () => {
-        if (putt30Feet >= 4) {
+        if (putt30Feet >= 8) {
           setPutt30Points(5);
-        } else if (putt30Feet >= 3) {
+        } else if (putt30Feet >= 6) {
           setPutt30Points(4);
-        } else if (putt30Feet >= 2) {
+        } else if (putt30Feet >= 4) {
           setPutt30Points(3);
-        } else if (putt30Feet >= 1) {
+        } else if (putt30Feet >= 2) {
           setPutt30Points(2);
         } else if (putt30Feet >= 0) {
           setPutt30Points(1);
@@ -160,13 +160,13 @@ const PuttingSession = () => {
       putt30points();
 
       const putt35points = () => {
-        if (putt35Feet >= 4) {
+        if (putt35Feet >= 8) {
           setPutt35Points(5);
-        } else if (putt35Feet >= 3) {
+        } else if (putt35Feet >= 6) {
           setPutt35Points(4);
-        } else if (putt35Feet >= 2) {
+        } else if (putt35Feet >= 4) {
           setPutt35Points(3);
-        } else if (putt35Feet >= 1) {
+        } else if (putt35Feet >= 2) {
           setPutt35Points(2);
         } else if (putt35Feet >= 0) {
           setPutt35Points(1);
