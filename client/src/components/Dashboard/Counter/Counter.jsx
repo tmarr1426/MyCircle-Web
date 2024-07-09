@@ -18,10 +18,10 @@ const Counter = ({ name }) => {
   return (
     <div className="counter" style={{ textAlign: "center" }}>
       <h4 className="h4">{name}</h4>
-      <p className="">{count}</p>
       <button className="putt-button" type="button" onClick={increment}>
         +
       </button>
+      <p className="">{count}</p>
       <button className="putt-button" type="button" onClick={decrement}>
         -
       </button>

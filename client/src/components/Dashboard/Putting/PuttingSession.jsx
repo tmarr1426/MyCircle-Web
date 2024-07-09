@@ -40,7 +40,8 @@ const PuttingSession = () => {
     }
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    // Added parameter 'e'
     e.preventDefault();
     try {
       const response = await fetch("backend url", {
@@ -64,41 +65,147 @@ const PuttingSession = () => {
 
       const puttData = await response.json();
       console.log(puttData);
-      const points = async () => {
+
+      const putt10points = () => {
         if (putt10Feet > 8) {
           setPutt10Points(10);
-        } else if (putt10Feet > 7 && putt10Feet < 8) {
+        } else if (putt10Feet >= 7) {
           setPutt10Points(8);
-        } else if (putt10Feet > 6 && putt10Feet <= 7) {
+        } else if (putt10Feet >= 6) {
           setPutt10Points(7);
-        } else if (putt10Feet > 5 && putt10Feet <= 6) {
+        } else if (putt10Feet >= 5) {
           setPutt10Points(6);
-        } else if (putt10Feet > 4 && putt10Feet <= 5) {
+        } else if (putt10Feet >= 4) {
           setPutt10Points(5);
-        } else if (putt10Feet > 3 && putt10Feet <= 4) {
+        } else if (putt10Feet >= 3) {
           setPutt10Points(4);
-        } else if (putt10Feet > 2 && putt10Feet <= 3) {
+        } else if (putt10Feet >= 2) {
           setPutt10Points(3);
-        } else if (putt10Feet > 1 && putt10Feet <= 2) {
+        } else if (putt10Feet >= 1) {
           setPutt10Points(2);
-        } else if (putt10Feet > 0 && putt10Feet <= 1) {
+        } else if (putt10Feet >= 0) {
           setPutt10Points(1);
         } else {
           console.log("There has been an error");
         }
-        points(puttData);
-        // try {
-        //   const response = await fetch("fetch url", {
-        //     headers: {
-        //       Authorization: `Bearer ${localStorage.getItem("MyToken")}`,
-        //     },
-        //   });
-        //   const json = await response.json();
-        //   console.log(json);
-        // } catch (err) {
-        //   console.log(err);
-        // }
       };
+      putt10points();
+
+      const putt15points = () => {
+        if (putt15Feet >= 4) {
+          setPutt15Points(5);
+        } else if (putt15Feet >= 3) {
+          setPutt15Points(4);
+        } else if (putt15Feet >= 2) {
+          setPutt15Points(3);
+        } else if (putt15Feet >= 1) {
+          setPutt15Points(2);
+        } else if (putt15Feet >= 0) {
+          setPutt15Points(1);
+        } else {
+          console.log("There has been an error");
+        }
+      };
+      putt15points();
+
+      const putt20points = () => {
+        if (putt20Feet >= 4) {
+          setPutt20Points(5);
+        } else if (putt20Feet >= 3) {
+          setPutt20Points(4);
+        } else if (putt20Feet >= 2) {
+          setPutt20Points(3);
+        } else if (putt20Feet >= 1) {
+          setPutt20Points(2);
+        } else if (putt20Feet >= 0) {
+          setPutt20Points(1);
+        } else {
+          console.log("There has been an error");
+        }
+      };
+      putt20points();
+
+      const putt25points = () => {
+        if (putt25Feet >= 4) {
+          setPutt25Points(5);
+        } else if (putt25Feet >= 3) {
+          setPutt25Points(4);
+        } else if (putt25Feet >= 2) {
+          setPutt25Points(3);
+        } else if (putt25Feet >= 1) {
+          setPutt25Points(2);
+        } else if (putt25Feet >= 0) {
+          setPutt25Points(1);
+        } else {
+          console.log("There has been an error");
+        }
+      };
+      putt25points();
+
+      const putt30points = () => {
+        if (putt30Feet >= 4) {
+          setPutt30Points(5);
+        } else if (putt30Feet >= 3) {
+          setPutt30Points(4);
+        } else if (putt30Feet >= 2) {
+          setPutt30Points(3);
+        } else if (putt30Feet >= 1) {
+          setPutt30Points(2);
+        } else if (putt30Feet >= 0) {
+          setPutt30Points(1);
+        } else {
+          console.log("There has been an error");
+        }
+      };
+      putt30points();
+
+      const putt35points = () => {
+        if (putt35Feet >= 4) {
+          setPutt35Points(5);
+        } else if (putt35Feet >= 3) {
+          setPutt35Points(4);
+        } else if (putt35Feet >= 2) {
+          setPutt35Points(3);
+        } else if (putt35Feet >= 1) {
+          setPutt35Points(2);
+        } else if (putt35Feet >= 0) {
+          setPutt35Points(1);
+        } else {
+          console.log("There has been an error");
+        }
+      };
+      putt35points();
+
+      const myCirlce = () => {
+        const totalPoints =
+          putt10Points +
+          putt15Points +
+          putt20Points +
+          putt25Points +
+          putt30Points +
+          putt35Points;
+        console.log(`Total points: ${totalPoints}`);
+      };
+      myCirlce();
+
+      const postTotalPoints = async () => {
+        const response = await fetch("your-database-url", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ myCircle: totalPoints }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log("Posted total points:", result);
+      };
+
+      postTotalPoints();
     } catch (err) {
       console.error("You hit an error during submission", err);
     }

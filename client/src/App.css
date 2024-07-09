@@ -4,10 +4,27 @@
   padding: 2rem;
   text-align: center;
 }
+.counter {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1em;
+}
+.submit1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  height: 5vh;
+  font-size: 20px;
 }
 .nav {
   display: flex;
@@ -68,17 +85,20 @@ form {
     flex-direction: row;
     gap: 2em;
     justify-content: center;
+    align-items: center;
   }
   form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1em;
   }
   .putt-button {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 25vw;
+    align-items: center;
+    width: 5vw;
     height: 5vh;
     font-size: 20px;
   }
@@ -120,7 +140,7 @@ form {
   }
 
   .h4 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   p {
