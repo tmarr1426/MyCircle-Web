@@ -90,7 +90,7 @@ const PuttingSession = () => {
         }
       };
       putt10points();
-
+      console.log(putt10Points);
       const putt15points = () => {
         if (putt15Feet >= 8) {
           setPutt15Points(5);
@@ -107,7 +107,7 @@ const PuttingSession = () => {
         }
       };
       putt15points();
-
+      console.log(putt15Points);
       const putt20points = () => {
         if (putt20Feet >= 8) {
           setPutt20Points(5);
@@ -124,7 +124,7 @@ const PuttingSession = () => {
         }
       };
       putt20points();
-
+      console.log(putt20Points);
       const putt25points = () => {
         if (putt25Feet >= 8) {
           setPutt25Points(5);
@@ -141,7 +141,7 @@ const PuttingSession = () => {
         }
       };
       putt25points();
-
+      console.log(putt25Points);
       const putt30points = () => {
         if (putt30Feet >= 8) {
           setPutt30Points(5);
@@ -158,7 +158,7 @@ const PuttingSession = () => {
         }
       };
       putt30points();
-
+      console.log(putt30Points);
       const putt35points = () => {
         if (putt35Feet >= 8) {
           setPutt35Points(5);
@@ -175,7 +175,7 @@ const PuttingSession = () => {
         }
       };
       putt35points();
-
+      console.log(putt35Points);
       const myCirlce = () => {
         const totalPoints =
           putt10Points +

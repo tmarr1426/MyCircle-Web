@@ -3,12 +3,6 @@ import { Box, Card, CardContent, Typography, CardMedia } from "@mui/material";
 
 const Dashboard = () => {
   const [stats, setStats] = useState([]);
-  const [putt10Feet, setPutt10Feet] = useState([]);
-  const [putt15Feet, setPutt15Feet] = useState([]);
-  const [putt20Feet, setPutt20Feet] = useState([]);
-  const [putt25Feet, setPutt25Feet] = useState([]);
-  const [putt30Feet, setPutt30Feet] = useState([]);
-  const [putt35Feet, setPutt35Feet] = useState([]);
 
   useEffect(() => {
     const myCircle = async () => {
