@@ -107,6 +107,7 @@ form {
     flex-direction: row;
     gap: 1em;
     justify-content: center;
+    margin-top: 1em;
   }
   .header {
     display: flex;
@@ -136,11 +137,11 @@ form {
   }
 
   .h1 {
-    font-size: 8em;
+    font-size: 6em;
   }
 
   .h4 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   p {

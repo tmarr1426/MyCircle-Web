@@ -35,7 +35,7 @@ const Dashboard = () => {
           MyCircle is the area that you should be aiming to get your drives or
           approaches within to have a 90% confidence rate putt.
         </h4>
-        {stats.map((obj) => {
+        {/* {stats.map((obj) => {
           return (
             <Card key={obj.id}>
               <Box>
@@ -43,7 +43,12 @@ const Dashboard = () => {
               </Box>
             </Card>
           );
-        })}
+        })} */}
+        <Card>
+          <Box>
+            <Typography>MyCircle:</Typography>
+          </Box>
+        </Card>
       </div>
     </>
   );
