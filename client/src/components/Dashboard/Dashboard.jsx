@@ -13,7 +13,7 @@ const Dashboard = () => {
   useEffect(() => {
     const myCircle = async () => {
       try {
-        const data = await fetch("Fetch URL", {
+        const data = await fetch("http://localhost:8080/stats/getAll", {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("MyToken")}`,
           },

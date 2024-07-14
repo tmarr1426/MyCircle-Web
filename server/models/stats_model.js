@@ -9,8 +9,28 @@ const StatsSchema = new mongoose.Schema(
       required: true,
       ref: User,
     },
-    postBody: {
-      type: String,
+    score10: {
+      type: Number,
+      required: true,
+    },
+    score15: {
+      type: Number,
+      required: true,
+    },
+    score20: {
+      type: Number,
+      required: true,
+    },
+    score25: {
+      type: Number,
+      required: true,
+    },
+    score30: {
+      type: Number,
+      required: true,
+    },
+    score35: {
+      type: Number,
       required: true,
     },
   },
