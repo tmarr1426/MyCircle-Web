@@ -33,9 +33,10 @@ const Dashboard = () => {
     const putt35 = parseFloat(localStorage.getItem("35 feet")) || 0;
 
     const totalStats = putt10 + putt15 + putt20 + putt25 + putt30 + putt35;
+    const myCircleStat = totalStats / 6;
 
-    setStats(totalStats);
-    // localStorage.setItem(totalStats);
+    setStats(myCircleStat);
+    localStorage.setItem("myCircle", myCircleStat);
   }, []);
 
   return (
