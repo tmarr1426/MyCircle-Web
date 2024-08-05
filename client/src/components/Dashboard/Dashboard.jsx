@@ -4,7 +4,7 @@ import { Box, Card, CardContent, Typography, CardMedia } from "@mui/material";
 const Dashboard = () => {
   const [stats, setStats] = useState(0);
 
-  let myCircle = 17;
+  let stat1 = 17;
 
   // useEffect(() => {
   //   const myCircle = async () => {
@@ -26,17 +26,16 @@ const Dashboard = () => {
   // }, []);
   useEffect(() => {
     const putt10 = parseFloat(localStorage.getItem("10 feet")) || 0;
-    const putt15 = parseFloat(localStorage.getItem("15 feet")) || 0;
-    const putt20 = parseFloat(localStorage.getItem("20 feet")) || 0;
-    const putt25 = parseFloat(localStorage.getItem("25 feet")) || 0;
-    const putt30 = parseFloat(localStorage.getItem("30 feet")) || 0;
-    const putt35 = parseFloat(localStorage.getItem("35 feet")) || 0;
+    const putt15 = (parseFloat(localStorage.getItem("15 feet")) || 0) / 2;
+    const putt20 = (parseFloat(localStorage.getItem("20 feet")) || 0) / 2;
+    const putt25 = (parseFloat(localStorage.getItem("25 feet")) || 0) / 2;
+    const putt30 = (parseFloat(localStorage.getItem("30 feet")) || 0) / 2;
+    const putt35 = (parseFloat(localStorage.getItem("35 feet")) || 0) / 2;
 
     const totalStats = putt10 + putt15 + putt20 + putt25 + putt30 + putt35;
-    const myCircleStat = totalStats / 6;
-
-    setStats(myCircleStat);
-    localStorage.setItem("myCircle", myCircleStat);
+    const myCircle = (stat1 + totalStats) / 2;
+    setStats(myCircle);
+    localStorage.setItem("MyCircle Stat", totalStats);
   }, []);
 
   return (
@@ -62,7 +61,7 @@ const Dashboard = () => {
         })} */}
         <Card>
           <Box>
-            <Typography>MyCircle: {myCircle} Feet</Typography>
+            <Typography>MyCircle: {stats} Feet</Typography>
           </Box>
         </Card>
       </div>
